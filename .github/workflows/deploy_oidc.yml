@@ -1,0 +1,27 @@
+name: Deploy with OIDC
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test-oidc-login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure Login via OIDC
+        uses: azure/login@v2
+        with:
+          client-id: 841951c2-ab37-4b92-82ea-8df46a8d626c
+          tenant-id: 529d69d4-e6ac-4af1-a97d-b3a621b09701
+          subscription-id: a220474d-65d9-484b-8d3c-4fd5bd5ca6bf
+
+      - name: Read secret from Key Vault (proves OIDC + RBAC works)
+        run: |
+          az keyvault secret show --vault-name kv-hanqin-iam-proj --name test-secret --query value -o tsv
