@@ -24,4 +24,4 @@ jobs:
 
       - name: Read secret from Key Vault (proves OIDC + RBAC works)
         run: |
-          az keyvault secret show --vault-name kv-hanqin-iam-proj --name test-secret --query value -o tsv
+          az keyvault secret show --vault-name kv-hanqin-iam-proj --name tlab-iam-sec001 --query value -o tsv
