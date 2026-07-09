@@ -35,4 +35,4 @@ Each folder's screenshots are numbered in the order you'd walk through that phas
 
 ## How to read this repo
 
-If you're skimming: start with the [project page](https://hanqin-lyu.github.io/Projects/Zero-Trust%20Identity%20Governance%20Platform%20on%20Microsoft%20Entra%20ID.html) for the architecture and the reasoning. Come back here for the underlying proof — every claim on that page traces back to a screenshot in one of these folders.
+Start with the [project page](https://hanqin-lyu.github.io/Projects/Zero-Trust%20Identity%20Governance%20Platform%20on%20Microsoft%20Entra%20ID.html) for the architecture and the reasoning. Come back here for the underlying proof — every claim on that page traces back to a screenshot in one of these folders.
